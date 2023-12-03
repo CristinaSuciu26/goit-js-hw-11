@@ -1,0 +1,113 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+.photo {
+  height: 250px;
+  object-fit: cover;
+  width: 350px;
+  border-color: #8a6844;
+  border-radius: 10px;
+  display: block;
+}
+body {
+  background-color: #e5d9cb;
+}
+.search-form {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-image: linear-gradient(
+    to right,
+    #c4a687 15%,
+    #a67d52 45%,
+    #8a6844
+  );
+  margin-bottom: 15px;
+}
+.search-input {
+  display: flex;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+  background-color: #d1bba2;
+  border: none;
+  width: 30%;
+  border-bottom: 0.3rem solid;
+}
+input::placeholder {
+  color: white;
+}
+.search-button,
+.load-more {
+  background-image: linear-gradient(#dfcfbe, #8a6844);
+  border: 1px solid #8a6844;
+  margin-left: 5px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  line-height: 1.47059;
+  min-width: 30px;
+  overflow: visible;
+  padding: 4px 15px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.search-button:hover,
+.load-more:hover {
+  background-image: linear-gradient(#a67d52, #8a6844);
+  background-color: #aa7843;
+  text-decoration: none;
+}
+.load-more {
+  display: flex;
+  margin-left: 550px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.photo-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 3px;
+  max-width: 300px;
+  color: #8a6844;
+  transition: transform 0.3s ease;
+}
+.photo-card:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #c4a687;
+  transform: scale(1.1);
+}
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.info-item {
+  text-align: center;
+  flex: 1;
+  max-width: 100px;
+  padding: 4px;
+  margin-top: 10px;
+}
