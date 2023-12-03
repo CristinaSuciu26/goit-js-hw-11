@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
         initiateSearch();
       } else {
         // Show an error or provide feedback if the search term is empty
-        console.error('Please enter a search term.');
+        Notiflix.Notify.failure('Please enter a search term.');
       }
     });
 });

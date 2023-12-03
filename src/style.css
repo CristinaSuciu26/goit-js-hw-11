@@ -18,10 +18,10 @@ body {
   justify-content: center;
   padding: 20px;
   background-image: linear-gradient(
-    to right,
-    #c4a687 15%,
-    #a67d52 45%,
-    #8a6844
+    to bottom,
+    #dfcfbe 15%,
+    #d1bba2 45%,
+    #c4a687
   );
   margin-bottom: 15px;
 }
@@ -30,17 +30,20 @@ body {
   padding: 10px;
   font-size: 1.2rem;
   border-radius: 0.2rem;
-  background-color: #d1bba2;
+  background-color: #ece2d8;
   border: none;
   width: 30%;
-  border-bottom: 0.3rem solid;
+  box-shadow: 0 4px 8px 0 #6c3e0d;
 }
 input::placeholder {
-  color: white;
+  color: #6c3e0d;
+}
+input[type='text'] {
+  color: #6c3e0d;
 }
 .search-button,
 .load-more {
-  background-image: linear-gradient(#dfcfbe, #8a6844);
+  background-color: #c4a687;
   border: 1px solid #8a6844;
   margin-left: 5px;
   border-radius: 4px;
@@ -52,18 +55,24 @@ input::placeholder {
   font-weight: 400;
   letter-spacing: -0.022em;
   line-height: 1.47059;
-  min-width: 30px;
+  min-width: 35px;
   overflow: visible;
-  padding: 4px 15px;
+  padding: 4px 18px;
   text-align: center;
   white-space: nowrap;
+  box-shadow: 0 4px 8px 0 #6c3e0d;
 }
 
 .search-button:hover,
 .load-more:hover {
-  background-image: linear-gradient(#a67d52, #8a6844);
-  background-color: #aa7843;
-  text-decoration: none;
+  background-color: #6c3e0d;
+}
+
+.search-button:active,
+.load-more:hover {
+  background-color: #6c3e0d;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 .load-more {
   display: flex;
@@ -76,6 +85,8 @@ input::placeholder {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  padding: 2px 16px;
 }
 
 .photo-card {
@@ -90,6 +101,10 @@ input::placeholder {
   max-width: 300px;
   color: #8a6844;
   transition: transform 0.3s ease;
+
+  box-shadow: 0 4px 8px 0 #6c3e0d;
+  transition: 0.3s;
+  width: 40%;
 }
 .photo-card:hover {
   cursor: pointer;
