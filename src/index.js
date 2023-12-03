@@ -3,6 +3,7 @@ import Notiflix from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
+// Event listener for when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
   const imageContainer = document.querySelector('.gallery');
   const loadMoreButton = document.querySelector('.load-more');
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         Notiflix.Notify.success(`Hooray! We found ${totalImagesFound} images.`);
       }
 
+      // Updating the display with the fetched data
       updateDisplay(data);
     } catch (error) {
       Notiflix.Notify.failure(
@@ -66,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (data.hits.length > 0) {
+      // Looping through the fetched images and creating photo card HTML
       data.hits.forEach(image => {
         // Create the photo card HTML and append it to the gallery
         const photoCardHTML = createPhotoCard(image);
@@ -82,6 +85,8 @@ document.addEventListener('DOMContentLoaded', function () {
           "We're sorry, but you've reached the end of search results."
         );
       }
+
+      // Initializing SimpleLightbox for the gallery images
       new SimpleLightbox('.gallery a', {
         captionDelay: 250,
         captionsData: 'alt',
@@ -98,8 +103,12 @@ document.addEventListener('DOMContentLoaded', function () {
   function loadMoreImages() {
     const searchTermValue = searchInput.value;
     currentPage++;
+
+    // Calling the initiateSearch function with the updated page number
     initiateSearch(searchTermValue, currentPage);
   }
+
+  // Adding an event listener to the "Load more" button
   loadMoreButton.addEventListener('click', loadMoreImages);
 
   // Add an event listener to the search form
@@ -120,7 +129,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // Call the initiateSearch function with the new search term
         initiateSearch();
       } else {
-        // Show an error or provide feedback if the search term is empty
         Notiflix.Notify.failure('Please enter a search term.');
       }
     });

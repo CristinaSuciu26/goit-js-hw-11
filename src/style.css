@@ -65,8 +65,8 @@ input[type='text'] {
 
 .search-button:hover,
 .load-more:hover {
-  background-color: #6c3e0d;
-  color: #c4a687;
+  background-color: #a3886a;
+  color: #e0cdbc;
 }
 
 .search-button:active,
