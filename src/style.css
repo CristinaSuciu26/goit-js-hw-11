@@ -70,13 +70,12 @@ input[type='text'] {
 }
 
 .search-button:active,
-.load-more:hover {
+.load-more:active {
   background-color: #6c3e0d;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 .load-more {
-  display: flex;
   margin-left: 550px;
   margin-top: 30px;
   margin-bottom: 10px;
