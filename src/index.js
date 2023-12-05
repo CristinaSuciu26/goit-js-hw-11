@@ -25,9 +25,15 @@ document.addEventListener('DOMContentLoaded', function () {
       // Update total images found after the first search
       if (currentPage === 1) {
         totalImagesFound = data.totalHits;
+      }
+      if (totalImagesFound === 0) {
+        // Display an error when there are zero images found
+        Notiflix.Notify.failure(
+          'Sorry, no images found. Please try a different search query.'
+        );
+      } else {
         Notiflix.Notify.success(`Hooray! We found ${totalImagesFound} images.`);
       }
-
       // Updating the display with the fetched data
       updateDisplay(data);
     } catch (error) {
